@@ -13,6 +13,7 @@ import {
     FaTimes,
 } from "react-icons/fa";
 
+// Sidebar component
 const Sidebar = ({ setIsLoggedIn }) => {
     const navigate = useNavigate();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);

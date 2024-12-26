@@ -5,12 +5,12 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import Sidebar from "./component/sidebar/Siddebar"; // Adjust the import path as needed
-import Repository from "./component/Home/Home"; // Adjust the import path as needed
-import SignInPage from "./component/Login"; // Import the Login component
+import Sidebar from "./component/sidebar/Siddebar"; 
+import Repository from "./component/Home/Home"; 
+import SignInPage from "./component/Login"; 
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
   return (
     <Router>
@@ -37,7 +37,7 @@ const App = () => {
               element={isLoggedIn ? <Repository /> : <Navigate to="/login" />}
             />
 
-            {/* Redirect any other route to repositories or login */}
+            {/* Redirect to login if no route matches */}
             <Route
               path="*"
               element={<Navigate to={isLoggedIn ? "/repositories" : "/login"} />}

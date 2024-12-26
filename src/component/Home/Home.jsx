@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { FiRefreshCw } from "react-icons/fi"; // Refresh icon
-import { AiOutlinePlus } from "react-icons/ai"; // Plus icon
+import { FiRefreshCw } from "react-icons/fi"; 
+import { AiOutlinePlus } from "react-icons/ai"; 
 import { FaSearch } from "react-icons/fa";
 import repositories from "../data";
-import Sidebar from "../sidebar/Siddebar"; // Correct import path
 import { FaDatabase } from "react-icons/fa";
 
 const Repository = () => {
     const [count, setCount] = useState(repositories.length);
     const [isRefreshing, setIsRefreshing] = useState(false);
 
+    // Function to handle refresh button click
     const handleRefresh = () => {
         setIsRefreshing(true);
         setTimeout(() => {
@@ -28,7 +28,7 @@ const Repository = () => {
                         <p className="text-normal text-gray-600 mb-4">
                             {count} total Repositories
                         </p>
-
+                        {/* Search Input */}
                         <div className="flex items-center space-x-3 bg-white border border-gray-300 rounded-lg pl-4 pr-32 py-3 shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
                             <FaSearch className="text-gray-700 text-lg" />
                             <input

@@ -1,3 +1,6 @@
+// This file contains the data for the repositories that are displayed in the Repositories component. The data is an array of objects,
+//  where each object represents a repository. Each object has the following properties:
+
 const repositories = [
     {
       name: "design-system",
